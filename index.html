@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Zachary Forkash's Profile Page</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Zachary Forkash</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About me</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact info</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="resume_pfp.jpg" alt="Zach's picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Zachary Forkash</h1>
+        <p class="section__text__p2">Full Stack Web Developer and Python Dev</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="downloadFile()">View Resume</button>
+
+<script>
+  function downloadFile() {
+    // Change the file path to the local path of the file on your computer
+    var filePath = 'file:///C:/Users/Zachary/Documents/Zachary%20Forkash%20Resume%203.0%20Final%20(1)..pdf';
+    
+    // Create a temporary anchor element
+    var anchorElement = document.createElement('a');
+    
+    // Set the href attribute to the file path
+    anchorElement.href = filePath;
+    
+    // Add the download attribute to force download
+    anchorElement.download = 'ZacharyForkashResume.pdf';
+    
+    // Append the anchor element to the document body
+    document.body.appendChild(anchorElement);
+    
+    // Click the anchor element to trigger the download
+    anchorElement.click();
+    
+    // Remove the anchor element from the document
+    document.body.removeChild(anchorElement);
+  }
+</script>
+
+          <button class="btn btn-color-1" onclick="location.href='C:/Users/Zachary/Documents/CONTACT%20INFORMATION.pdf'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="linkedin.webp"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://www.linkedin.com/in/zachary-forkash-79553724b/'"
+          />
+          <img
+            src="github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/zfadeout'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              
+              <h3>Experience</h3>
+              <p>3 years <br />Full Stack Web Development</p>
+              <p>3 years <br />Python Development</p>
+            </div>
+            <div class="details-container">
+              
+              <h3>Education</h3>
+              <p>New York City College of Technology: Computer Systems Technology Bachelors Degree in progress<br />Midwood High School High School Degree</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Hi, I'm Zachary Forkash, a dedicated student deeply immersed in the study of data science and Python. I'm well-versed in web development, which complements my academic pursuits and allows me to apply my skills practically. With a deep passion for both fields, I'm always eager to expand my knowledge and expertise, continually seeking new learning opportunities to enhance my understanding and capabilities.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Full Stack Web Development</h2>
+            <div class="article-container">
+              <article>
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Flask</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+               
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Python Development</h2>
+            <div class="article-container">
+              <article>
+                
+                <div>
+                  <h3>Python</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            
+              <article>
+                
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="pythonimg.jpg"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/zfadeout/PythonFlaskLoginDataCollectionWebsite'"
+              >
+                Github Link
+              </button>
+            
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="JavaScript-logo.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/zfadeout/BookFinderAPI'"
+              >
+                Github Link
+              </button>
+              
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="HTML5_logo_and_wordmark.svg.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/zfadeout/Mock-Google'"
+              >
+                Github Link
+              </button>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          
+          <p><a href="mailto:examplemail@gmail.com">zfadeout@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+         
+          <p><a href="https://www.linkedin.com/in/zachary-forkash-79553724b/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
